@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <!-- cabecera -->
+    <div class="contenedor">
+        <div class="cabecera">
+            <h1 class="text-center">Estudio Técnico y de Seguridad</h1>
+            <p class="cabecera-texto">(Formulario Vigilante)</p>
+        </div>
+    </div>
+    <!-- contenido principal -->
+    <main class="contenido-principal contenedor">
+        <form id="mainForm" class="formulario">
+            <!-- cursos de seguridad -->
+            <fieldset>
+                <legend>Cursos de Seguridad</legend>
+                <div class="campo">
+                    <label for="curso-seguridad">Nombre Curso de Seguridad: </label>
+                    <input id="curso-seguridad" type="text" placeholder="Curso de Seguridad" required>
+                </div>
+                <div class="campo">
+                    <label for="fecha-finalizacion">Fecha de Finalización:</label>
+                    <input id="fecha-finalizacion" type="date" placeholder="Fecha de Finalización" required>
+                </div>
+            </fieldset>
+            <!-- datos personales -->
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <div class="campo">
+                    <label>Estado Civil:</label>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="soltero" name="estado_civil" value="Soltero" required>
+                        <label for="soltero">Soltero</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="casado" name="estado_civil" value="Casado">
+                        <label for="casado">Casado</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="union_libre" name="estado_civil" value="Union Libre">
+                        <label for="union_libre">Unión Libre</label>
+                    </div>
+                </div>
+                <!-- género -->
+                <div class="campo">
+                    <label>Género:</label>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="hombre" name="genero" value="Hombre" required>
+                        <label for="hombre">Hombre</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="mujer" name="genero" value="Mujer">
+                        <label for="mujer">Mujer</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="otro" name="genero" value="Otro">
+                        <label for="otro">Otro</label>
+                    </div>
+                    <div id="otro-genero" style="display: none;">
+                        <label for="otro-genero-texto"></label>
+                        <input id="otro-genero-texto" type="text" placeholder="Especifique su género">
+                    </div>
+                </div>
+                <!-- lugar de nacimiento -->
+                <div class="campo">
+                    <label for="lugar-nacimiento">Lugar de Nacimiento: </label>
+                    <input id="lugar-nacimiento" type="text" placeholder="Lugar de Nacimiento" required>
+                </div>
+                <!-- fecha de nacimiento -->
+                <div class="campo">
+                    <label for="fecha-nacimiento">Fecha de Nacimiento: </label>
+                    <input id="fecha-nacimiento" type="date" placeholder="Lugar de Nacimiento" required>
+                </div>
+                <!-- nacionalidad -->
+                <div class="campo">
+                    <label for="nacionalidad">Nacionalidad: </label>
+                    <input id="nacionalidad" type="text" placeholder="Nacionalidad" required>
+                </div>
+                <!-- edad -->
+                <div class="campo">
+                    <label for="edad">Edad: </label>
+                    <input id="edad" type="number" placeholder="edad" required>
+                </div>
+                <!-- fecha de expedicion documento -->
+                <div class="campo">
+                    <label for="fecha-expedicion-documento">Fecha de Expedicion Documento: </label>
+                    <input id="fecha-expedicion-documento" type="date" placeholder="Fecha de Expedicion de Documento" required>
+                </div>
+                <!-- RH -->
+                <div class="campo">
+                    <label for="rh">RH: </label>
+                    <input id="rh" type="text" placeholder="RH" required>
+                </div>
+                <!-- estatura -->
+                <div class="campo">
+                    <label for="estatura">Estatura: </label>
+                    <input id="estatura" type="number" placeholder="Estatura en centimetros" required>
+                </div>
+                <!-- direccion de residencia actual -->
+                <div class="campo">
+                    <label for="direccion-actual">Direccion de Residencia Actual: </label>
+                    <input id="direccion-actual" type="text" placeholder="Direccion de Residencia" required>
+                </div>
+                <!-- barrio -->
+                <div class="campo">
+                    <label for="barrio">Barrio: </label>
+                    <input id="barrio" type="text" placeholder="Barrio" required>
+                </div>
+                <!-- municipio -->
+                <div class="campo">
+                    <label for="municipio">Municipio: </label>
+                    <input id="municipio" type="text" placeholder="Municipio" required>
+                </div>
+                <!-- lugar, vereda, corregimiento -->
+                <div class="campo">
+                    <label for="vereda">Localidad, vereda, corregimiento: </label>
+                    <input id="vereda" type="text" placeholder="Localidad/vereda/corregimiento" required>
+                </div>
+                <!-- en cabeza de hogar -->
+                <div class="campo">
+                    <label>En Cabeza de Hogar:</label>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="cabeza-hogar-si" name="cabeza-hogar" value="si" required>
+                        <label for="cabeza-hogar-si">Sí</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="cabeza-hogar-no" name="cabeza-hogar" value="no">
+                        <label for="cabeza-hogar-no">No</label>
+                    </div>
+                </div>
+                <!-- talla pantalon -->
+                <div class="campo">
+                    <label>Talla de Pantalon:</label>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-pantalon-28" name="tallas-pantalon" value="28" required>
+                        <label for="talla-pantalon-28">28</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-pantalon-30" name="tallas-pantalon" value="30" required>
+                        <label for="talla-pantalon-30">30</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-pantalon-32" name="tallas-pantalon" value="32" required>
+                        <label for="talla-pantalon-32">32</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-pantalon-34" name="tallas-pantalon" value="34" required>
+                        <label for="talla-pantalon-34">34</label>
+                    </div>
+                </div>
+                <!-- talla zapatos -->
+                <div class="campo">
+                    <label>Talla de Zapatos:</label>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-zapatoz-28" name="tallas-zapatos" value="28" required>
+                        <label for="talla-zapatoz-28">28</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-zapatoz-30" name="tallas-zapatos" value="30" required>
+                        <label for="talla-zapatoz-30">30</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-zapatoz-32" name="tallas-zapatos" value="32" required>
+                        <label for="talla-zapatoz-32">32</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-zapatoz-34" name="tallas-zapatos" value="34" required>
+                        <label for="talla-zapatoz-34">34</label>
+                    </div>
+                </div>
+                <!-- talla camiza -->
+                <div class="campo">
+                    <label>Talla de Camisa:</label>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-camisa-28" name="tallas-camiza" value="28" required>
+                        <label for="talla-camisa-28">28</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-camisa-30" name="tallas-camiza" value="30" required>
+                        <label for="talla-camisa-30">30</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-camisa-32" name="tallas-camiza" value="32" required>
+                        <label for="talla-camisa-32">32</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="talla-camisa-34" name="tallas-camiza" value="34" required>
+                        <label for="talla-camisa-34">34</label>
+                    </div>
+                </div>
+                <!-- telefono fijo -->
+                <div class="campo">
+                    <label for="telefono-fijo">Telefo Fijo: </label>
+                    <input id="telefono-fijo" type="text" placeholder="Telefo Fijo" required>
+                </div>
+                <!-- Telefono Celular -->
+                <div class="campo">
+                    <label for="telefono-celular">Telefo Celular: </label>
+                    <input id="telefono-celular" type="text" placeholder="telefono-celular" required>
+                </div>
+                <!-- correo electronico -->
+                <div class="campo">
+                    <label for="correo-electronico">Correo Electronico: </label>
+                    <input id="correo-electronico" type="text" placeholder="Correo Electronico" required>
+                </div>
+            </fieldset>
+
+            <!-- datos personales con quien vive -->
+            <fieldset>
+                <legend>Datos Personales con quen Vive</legend>
+                <!-- persona 1 -->
+                <div class="campo">
+                    <label for="persona1">Nombres y Apellidos Persona 1: </label>
+                    <input id="persona1" type="text" placeholder="Nombre y Apellidos" required>
+                </div>
+                <div class="campo">
+                    <label for="parentesco1">Parentesco Persona 1: </label>
+                    <input id="parentesco1" type="text" placeholder="Parentesco" required>
+                </div>
+                <div class="campo">
+                    <label for="ocupacion1">Ocupacion Persona 1: </label>
+                    <input id="ocupacion1" type="text" placeholder="Ocupacion" required>
+                </div>
+                <div class="campo">
+                    <label for="contacto1">Teléfono fijo y/o Celular Persona 1: </label>
+                    <input id="contacto1" type="text" placeholder="Contacto" required>
+                </div>
+                <!-- persona 2 -->
+                <div class="campo">
+                    <label for="persona2">Nombres y Apellidos Persona 2: </label>
+                    <input id="persona2" type="text" placeholder="Nombre y Apellidos" required>
+                </div>
+                <div class="campo">
+                    <label for="parentesco2">Parentesco Persona 2: </label>
+                    <input id="parentesco2" type="text" placeholder="Parentesco" required>
+                </div>
+                <div class="campo">
+                    <label for="ocupacion2">Ocupacion Persona 2: </label>
+                    <input id="ocupacion2" type="text" placeholder="Ocupacion" required>
+                </div>
+                <div class="campo">
+                    <label for="contacto2">Teléfono fijo y/o Celular Persona 2: </label>
+                    <input id="contacto2" type="text" placeholder="Contacto" required>
+                </div>
+                <!-- persona 3 -->
+                <div class="campo">
+                    <label for="persona3">Nombres y Apellidos Persona 3: </label>
+                    <input id="persona3" type="text" placeholder="Nombre y Apellidos" required>
+                </div>
+                <div class="campo">
+                    <label for="parentesco3">Parentesco Persona 3: </label>
+                    <input id="parentesco3" type="text" placeholder="Parentesco" required>
+                </div>
+                <div class="campo">
+                    <label for="ocupacion3">Ocupacion Persona 3: </label>
+                    <input id="ocupacion3" type="text" placeholder="Ocupacion" required>
+                </div>
+                <div class="campo">
+                    <label for="contacto3">Teléfono fijo y/o Celular Persona 3: </label>
+                    <input id="contacto3" type="text" placeholder="Contacto" required>
+                </div>
+            </fieldset>
+
+            <!-- opcion situacion militar -->
+            <fieldset>
+                <legend>situacion Militar</legend>
+                <div class="campo">
+                    <label>Situación Militar:</label>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="situacion-militar-si" name="situacion-militar" value="si" required>
+                        <label for="situacion-militar-si">Sí</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="situacion-militar-no" name="situacion-militar" value="no">
+                        <label for="situacion-militar-no">No</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            
+
+            <!-- situación militar formulario -->
+            <fieldset id="situacion-militar-fieldset" style="display: none;">
+                <legend>Situación Militar</legend>
+                <!-- clase de libreta -->
+                <div class="campo">
+                    <label>Libreta Militar:</label>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="primera-clase" name="libreta-militar" value="primera-clase" required>
+                        <label for="primera-clase">Primera Clase</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="segunda-clase" name="libreta-militar" value="segunda-clase">
+                        <label for="segunda-clase">Segunda Clase</label>
+                    </div>
+                </div>
+                <!-- distrito militar -->
+                <div class="campo">
+                    <label for="distrito-militar">Distrito Militar: </label>
+                    <input id="distrito-militar" type="text" placeholder="Distrito Militar" required>
+                </div>
+            </fieldset>
+
+            
+
+            <!-- opcion de vehiculo -->
+            <fieldset>
+                <legend>Vehiculo</legend>
+                <div class="campo">
+                    <label>Tiene Licencia de Conduccion Vehiculo:</label>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="vehiculo-si" name="vehiculo" value="si" required>
+                        <label for="vehiculo-si">Sí</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="vehiculo-no" name="vehiculo" value="no">
+                        <label for="vehiculo-no">No</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- clase de vehiculo -->
+            <fieldset id="tipo-vehiculo-fieldset" style="display: none;">
+                <legend>Informacion de Vehiculo</legend>
+                <!-- clase de libreta -->
+                <div class="campo">
+                    <label>Categoría Licencia de conducción:</label><br>
+                    <input type="checkbox" id="opcion1" name="opciones" value="Opción 1">
+                    <label for="opcion1">A1</label><br>
+                    <input type="checkbox" id="opcion2" name="opciones" value="Opción 2">
+                    <label for="opcion2">A2</label><br>
+                    <input type="checkbox" id="opcion3" name="opciones" value="Opción 3">
+                    <label for="opcion3">B1</label><br>
+                    <input type="checkbox" id="opcion4" name="opciones" value="Opción 4">
+                    <label for="opcion4">B3</label><br>
+                    <input type="checkbox" id="opcion5" name="opciones" value="Opción 5">
+                    <label for="opcion5">C1</label>
+                    <input type="checkbox" id="opcion5" name="opciones" value="Opción 5">
+                    <label for="opcion5">C2</label>
+                    <input type="checkbox" id="opcion5" name="opciones" value="Opción 5">
+                    <label for="opcion5">C3</label>
+                </div>
+                <!-- cuenta con vehiculo propio -->
+                <div class="campo">
+                    <label>Cuenta con Vehiculo Propio:</label>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="vehiculo-propio-si" name="vehiculo-propio" value="si" required>
+                        <label for="vehiculo-propio-si">Sí</label>
+                    </div>
+                    <div class="espacio-ratio-buttom">
+                        <input type="radio" id="vehiculo-propio-no" name="vehiculo-propio" value="no">
+                        <label for="vehiculo-propio-no">No</label>
+                    </div>
+                </div>
+                <!-- que vehiculo tiene -->
+                <div class="campo">
+                    <label>Que vehiculo Tiene:</label><br>
+                    <input type="checkbox" id="vehiculo1" name="vehiculo-tipo" value="vehiculo 1">
+                    <label for="opcion1">Moto</label><br>
+                    <input type="checkbox" id="vehiculo2" name="vehiculo-tipo" value="vehiculo 2">
+                    <label for="opcion2">Carro</label><br>
+                    <input type="checkbox" id="vehiculo3" name="vehiculo-tipo" value="vehiculo 3">
+                    <label for="opcion2">Bicicleta</label><br>
+                </div>
+                <!-- tipo de servicio -->
+                <div class="campo">
+                    <label>Que vehiculo Tiene:</label><br>
+                    <input type="checkbox" id="vehiculoTipo1" name="vehiculo-servicio" value="vehiculoTipo 1">
+                    <label for="opcion1">Publico</label><br>
+                    <input type="checkbox" id="vehiculoTipo1" name="vehiculo-servicio" value="vehiculoTipo 2">
+                    <label for="opcion2">Particular</label><br>
+                </div>
+            </fieldset>
+            <!-- <input class="btn" type="submit" value="Enviar Formulario"> -->
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

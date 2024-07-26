@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <!-- cabecera -->
+    <div class="contenedor">
+        <div class="cabecera">
+            <h1 class="text-center">Estudio Técnico y de Seguridad</h1>
+        </div>
+    </div>
+    <!-- contenido principal -->
+     <main class="contenido-principal contenedor">
+        <form class="formulario" >
+            <!-- cursos de seguridad -->
+            <fieldset>
+                <legend>Cursos de Seguridad</legend>
+                <div class="campo">
+                    <label for="curso-seguridad">Nombre Curso de Seguridad: </label>
+                    <input id="curso-seguridad" type="text" placeholder="Curso de Seguridad" required>
+                </div>
+                <div class="campo">
+                    <label for="fecha-finalizacion">Fecha de Finalizacion:</label>
+                    <input id="fecha-finalizacion" type="date" placeholder="Fecha de Finalizacion"  required>
+                </div>
+            </fieldset>
+            <!-- cursos de seguridad -->
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <div class="campo">
+                    <label>Estado Civil:</label>
+                    <div>
+                        <input type="radio" id="soltero" name="estado_civil" value="Soltero" required>
+                        <label for="soltero">Soltero</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="casado" name="estado_civil" value="Casado">
+                        <label for="casado">Casado</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="union_libre" name="estado_civil" value="Union Libre">
+                        <label for="union_libre">Unión Libre</label>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+     </main>
+</body>
+</html>

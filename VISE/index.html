@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <!-- cabecera -->
+    <div class="contenedor">
+        <div class="cabecera">
+            <h1 class="text-center">Estudio Técnico y de Seguridad</h1>
+        </div>
+    </div>
+    <!-- contenido principal -->
+     <main class="contenido-principal contenedor">
+        <form class="formulario" id="mainForm">
+            <!-- Datos principales -->
+            <fieldset>
+                <legend>Ingresar Datos</legend>
+                <div class="campo">
+                    <label for="nombre">Nombre Completo: </label>
+                    <input id="nombre" type="text" placeholder="Tu nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="cedula">Cedula: </label>
+                    <input id="cedula" type="number" placeholder="Tu Cedula"  required>
+                </div>
+                <div class="campo">
+                    <label for="fecha-presentacion">Fecha de Presentacion:</label>
+                    <input id="fecha-presentacion" type="date" placeholder="Fecha de Presentacion"  required>
+                </div>
+            </fieldset>
+            <!-- cargo solicitante -->
+            <fieldset>
+                <legend>Cargo Solicitado</legend>
+                <div class="campo">
+                    <label for="cargo">Cargo Solicitado: </label>
+                    <select id="cargo" required>
+                        <option value="" disabled selected>Seleccione un cargo</option>
+                        <option value="Vigilante">Vigilante</option>
+                        <option value="Operador de Medios">Operador de Medios</option>
+                        <option value="Escolta">Escolta</option>
+                        <option value="Supervisor">Supervisor</option>
+                        <option value="Conductor">Conductor</option>
+                        <option value="Analista">Analista</option>
+                        <option value="Coordinador">Coordinador</option>
+                        <option value="Investigador">Investigador</option>
+                        <option value="Director">Director</option>
+                        <option value="Jefe">Jefe</option>
+                        <option value="Auxiliar">Auxiliar</option>
+                    </select>
+                </div>
+                <input class="btn" type="submit" value="Enviar Formulario">
+            </fieldset>
+        </form>
+     </main>
+
+     <script src="script.js"></script>
+</body>
+</html>
